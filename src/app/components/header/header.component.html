@@ -1,0 +1,16 @@
+<div class="header-content">
+  <mat-form-field class="header-item">
+    <mat-label>Game mode</mat-label>
+    <mat-select [(value)]="selectedMode.title">
+      <mat-option *ngFor="let item of modes" [value]="item.title">
+        {{item.title}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <input type="text" placeholder="Enter your name" class="header-item custom-input" >
+
+  <button class="header-item btn-custom">
+    PLAY
+  </button>
+</div>

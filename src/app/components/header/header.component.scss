@@ -1,0 +1,33 @@
+.header-content{
+    display: flex;
+    justify-content: center;
+    height: 46px;
+}
+
+.custom-input{
+    background: #F3F3F3;
+    // color: #92A2A6;
+    border:none;
+    outline: 0;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.btn-custom{
+    background: #7B8D93;
+    border:none;
+    outline: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    min-width: 100px;
+
+    &:active{
+        opacity: 0.9;
+    }
+}
+
+
+.header-item{
+    margin: 0 5px;
+}

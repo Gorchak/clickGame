@@ -1,0 +1,19 @@
+
+.general-container{
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin: 20vh auto;
+}
+
+.general-container__content{
+    padding: 40px;
+    border: 2px solid grey;
+    text-align: center;
+    width: 50%;
+}
+
+.leader-board-container{
+    text-align: left;
+}
+

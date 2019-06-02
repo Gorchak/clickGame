@@ -1,0 +1,12 @@
+<div class="game-message">
+  <span>
+    Message here
+  </span>
+</div>
+
+<div class="game-field">
+  <div class="game-field-row" *ngFor="let row of fieldSize | arrNumbers">
+    <div class="game-field-square" *ngFor="let item of fieldSize | arrNumbers">
+    </div>
+  </div>
+</div>
