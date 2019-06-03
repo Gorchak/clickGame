@@ -2,7 +2,7 @@ import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { SettingsService } from 'src/app/services/settings.service';
 import { Subscription } from 'rxjs';
 import { GameService } from 'src/app/services/game.service';
-import { HeaderComponent } from '../header/header.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
 
 @Component({
   selector: 'app-field',
@@ -158,14 +158,13 @@ export class FieldComponent implements OnInit {
         winner: winner,
         date: date
       }
-      this.sendProgress(true);
-      this.gameWinner = winner;
-      this.sendWinner(winner);
-      // this.gameService.postResult(result).subscribe(data => {
-      //   this.gameWinner = winner;
-      //   this.sendWinner(winner);
-      // }
-      // );
+
+      this.gameService.postResult(result).subscribe(data => {
+        this.sendProgress(true);
+        this.gameWinner = winner;
+        this.sendWinner(winner);
+      }
+      );
     } else {
       this.sendWinner('');
       return "The game was not finish"

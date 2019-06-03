@@ -40,3 +40,19 @@
     background: lightcoral;
     color: white;
 }
+
+
+
+@media only screen and (max-width: 992px) {
+    .header-content{
+        flex-direction: column;
+        height: auto;
+    }
+    .btn-custom{
+        min-height: 45px;
+        margin-top: 10px;
+    }
+    .custom-input{
+        min-height: 30px;
+    }
+}

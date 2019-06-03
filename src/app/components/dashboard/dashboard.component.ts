@@ -6,11 +6,11 @@ import { SettingsService } from 'src/app/services/settings.service';
 import { GameService } from 'src/app/services/game.service';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class DashboardComponent implements OnInit {
 
   constructor(
     private settingsService: SettingsService,
