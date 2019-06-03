@@ -4,28 +4,12 @@
   </h2>
 
   <div class="leader-list">
-    <div class="leader-item">
+    <div class="leader-item" *ngFor="let leader of leaders">
       <span class="leader-item__name">
-        User name
+        {{leader.winner}}
       </span>
       <span class="leader-item__date">
-        12.12.1900
-      </span>
-    </div>
-    <div class="leader-item">
-      <span class="leader-item__name">
-        User name
-      </span>
-      <span class="leader-item__date">
-        12.12.1900
-      </span>
-    </div>
-    <div class="leader-item">
-      <span class="leader-item__name">
-        User name
-      </span>
-      <span class="leader-item__date">
-        12.12.1900
+        {{leader.date}}
       </span>
     </div>
   </div>

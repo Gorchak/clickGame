@@ -16,6 +16,20 @@
     border:1px solid grey;
 }
 
+
+
+.is-pending{
+    background: lightblue;
+}
+
+.is-checked-by-ai{
+    background: red;
+}
+
+.is-checked-by-user{
+    background: greenyellow;
+}
+
 .game-message{
     margin: 30px 0;
     font-size: 20px;

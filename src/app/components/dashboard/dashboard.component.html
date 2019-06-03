@@ -1,0 +1,29 @@
+<div class="header-content" *ngIf="selectedMode">
+  <mat-form-field class="header-item">
+    <mat-label>Game mode</mat-label>
+    <mat-select [(value)]="selectedMode.title">
+      <mat-option *ngFor="let item of settings" [value]="item.title" (click)="selectSettings(item)">
+        {{item.title}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <input type="text" [(ngModel)]="userName" placeholder="Enter your name" class="header-item custom-input">
+
+  <ng-template [ngIf]="isFinished" [ngIfElse]="isCancel">
+    <button [disabled]="!userName" class="header-item btn-custom"
+      (click)="clickStartGame(userName, selectedMode.field, selectedMode.delay)">
+      PLAY
+    </button>
+  </ng-template>
+
+  <ng-template #isCancel>
+    <button class="header-item btn-custom btn-red"
+      (click)="clickStopGame()">
+      STOP
+    </button>
+  </ng-template>
+
+</div>
+<div class="game-field-container">
+  <app-field></app-field>
+</div>

@@ -1,12 +1,18 @@
 <div class="game-message">
-  <span>
-    Message here
+  <span *ngIf="gameWinner">
+    {{gameWinner}} won!
   </span>
 </div>
 
-<div class="game-field">
-  <div class="game-field-row" *ngFor="let row of fieldSize | arrNumbers">
-    <div class="game-field-square" *ngFor="let item of fieldSize | arrNumbers">
+<div class="game-field" *ngIf="currentSettings">
+  <div class="game-field-row" *ngFor="let row of field">
+    <div class="game-field-square" *ngFor="let item of row" 
+    [ngClass]=
+    "{'is-pending': item.pending, 
+    'is-checked-by-ai': item.checkedBy === 'Computer',
+    'is-checked-by-user': item.checkedBy === 'User'}"
+    (click)="checkItem(item)"
+    >
     </div>
   </div>
 </div>
